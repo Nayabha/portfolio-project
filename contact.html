@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Nimesh Nayabha</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Form validation function
+    function validateForm(event) {
+      const name = document.forms["contactForm"]["name"].value;
+      const email = document.forms["contactForm"]["email"].value;
+      const message = document.forms["contactForm"]["message"].value;
+
+      if (name === "" || email === "" || message === "") {
+        alert("All fields must be filled out");
+        event.preventDefault();  // Prevent form submission
+      } else {
+        alert("Message sent successfully!");
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navigation Bar -->
+  <nav class="bg-gray-800 p-4 shadow-md fixed top-0 w-full z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <span class="text-xl font-bold">Nimesh Nayabha</span>
+      <ul class="flex gap-6">
+        <li><a href="index.html" class="hover:text-blue-400">Home</a></li>
+        <li><a href="about.html" class="hover:text-blue-400">About</a></li>
+        <li><a href="projects.html" class="hover:text-blue-400">Projects</a></li>
+        <li><a href="skills.html" class="hover:text-blue-400">Skills</a></li>
+        <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="pt-32 px-4 md:px-0">
+    <div class="container mx-auto max-w-4xl text-center">
+      <h2 class="text-4xl font-bold mb-8">Contact Me</h2>
+
+      <!-- Contact Info -->
+      <div class="mb-12 text-lg text-gray-300">
+        <p><strong>Email:</strong> <a href="mailto:nayabha86@gmail.com" class="text-blue-400">nayabha86@gmail.com</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/9779840780524" class="text-blue-400">+9779840780524</a></p>
+        
+        <div class="mt-6">
+          <a href="https://www.facebook.com/nimesh.nayabha.2025" target="_blank" class="text-blue-400 mr-4">Facebook</a>
+          <a href="https://www.instagram.com/nimeshnayabha/" target="_blank" class="text-blue-400 mr-4">Instagram</a>
+          <a href="https://www.linkedin.com/in/nimesh-nayabha-144154243/" target="_blank" class="text-blue-400 mr-4">LinkedIn</a>
+          <a href="https://github.com/Nayabha" target="_blank" class="text-blue-400 mr-4">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div>
+        <h3 class="text-3xl font-semibold mb-6">Send a Message</h3>
+        <form name="contactForm" onsubmit="validateForm(event)" class="max-w-lg mx-auto space-y-4">
+          <input type="text" name="name" placeholder="Your Name" class="w-full p-3 bg-gray-800 text-white rounded-lg focus:outline-none" required />
+          <input type="email" name="email" placeholder="Your Email" class="w-full p-3 bg-gray-800 text-white rounded-lg focus:outline-none" required />
+          <textarea name="message" rows="4" placeholder="Your Message" class="w-full p-3 bg-gray-800 text-white rounded-lg focus:outline-none" required></textarea>
+          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
